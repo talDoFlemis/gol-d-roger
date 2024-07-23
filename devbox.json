@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.12.0/.schema/devbox.schema.json",
+  "packages": {
+    "ruby":    "latest",
+    "bundler": "2.5",
+    "nodejs":  "21",
+    "yarn":    "1.22",
+    "curl":    "latest",
+    "sqlite":  "latest",
+    "libyaml": {
+      "version": "latest",
+      "outputs": ["out", "dev"]
+    },
+    "go-task": "latest"
+  },
+  "shell": {
+    "init_hook": [],
+    "scripts": {
+      "run_test":     ["./bin/rails test"],
+      "start_server": ["./bin/rails server"]
+    }
+  }
+}
