@@ -1,0 +1,10 @@
+version: 3
+
+tasks:
+  run:
+    cmd: ./bin/rails serve
+    desc: Serve rails app
+
+  test:
+    cmd: ./bin/rails test
+    desc: Test rails app
