@@ -1,0 +1,13 @@
+services:
+  database:
+    image: postgres:17beta2-alpine3.20
+    ports:
+      - 5432:5432
+    volumes:
+      - pg-data:/var/lib/postgres
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DATABASE: goldroger
+
+volumes:
+  pg-data:

@@ -11,7 +11,8 @@
       "version": "latest",
       "outputs": ["out", "dev"]
     },
-    "go-task": "latest"
+    "go-task":    "latest",
+    "postgresql": "latest"
   },
   "shell": {
     "init_hook": [],
