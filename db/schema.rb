@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_24_223901) do
+ActiveRecord::Schema[7.1].define(version: 2024_07_24_225446) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -47,6 +47,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_24_223901) do
     t.integer "size_in_bytes"
     t.string "delete_link"
     t.string "download_link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "uploads", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "name"
+    t.boolean "delete_first_download"
+    t.string "password_hash"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

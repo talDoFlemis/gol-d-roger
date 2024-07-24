@@ -1,0 +1,22 @@
+<div id="<%= dom_id upload %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= upload.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Delete first download:</strong>
+    <%= upload.delete_first_download %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Password hash:</strong>
+    <%= upload.password_hash %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">File:</strong>
+    <%= link_to upload.file.filename, upload.file if upload.file.attached? %>
+  </p>
+
+</div>
