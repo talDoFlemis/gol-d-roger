@@ -1,8 +1,8 @@
 version: 3
 
 tasks:
-  run:
-    cmd: ./bin/rails serve
+  dev:
+    cmd: ./bin/dev
     desc: Serve rails app
 
   test:
