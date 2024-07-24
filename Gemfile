@@ -73,3 +73,5 @@ gem "pg", "~> 1.5"
 gem "shadcn-ui", "~> 0.0.15"
 
 gem "tailwind_merge", "~> 0.12.0"
+
+gem "erb-formatter", "~> 0.7.3"

@@ -8,3 +8,7 @@ tasks:
   test:
     cmd: ./bin/rails test
     desc: Test rails app
+
+  format:
+    cmd: erb-format app/views/**/*.html.erb --write
+    desc: Format ERB code
