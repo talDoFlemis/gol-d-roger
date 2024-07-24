@@ -69,3 +69,7 @@ end
 gem "tailwindcss-rails", "~> 2.6"
 
 gem "pg", "~> 1.5"
+
+gem "shadcn-ui", "~> 0.0.15"
+
+gem "tailwind_merge", "~> 0.12.0"
