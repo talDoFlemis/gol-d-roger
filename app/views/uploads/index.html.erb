@@ -10,21 +10,23 @@
 
   <% content_for :title, "Uploads" %>
 
-  <div class="flex justify-between items-center">
+  <header class="flex justify-between items-center mb-6">
     <h1 class="font-bold text-4xl">Uploads</h1>
-    <%= link_to "New upload",
-    new_upload_path,
-    class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
-  </div>
+    <%= render_button as: :link, href: new_upload_path do %>
+      <%= inline_svg_tag 'upload-icon.svg', class: 'size-6 stroke-current mr-2' %>
+      Upload File
+    <% end %>
+  </header>
 
-  <div id="uploads" class="min-w-full">
+  <div id="uploads" class="min-w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
     <% @uploads.each do |upload| %>
-      <%= render upload %>
-      <p>
-        <%= link_to "Show this upload",
-        upload,
-        class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-      </p>
+      <%= link_to(upload) do %>
+        <%= render_card class: 'relative overflow-hidden' do %>
+          <div class="p-4">
+            <h3 class="text-lg font-medium truncate"><%= upload.name %></h3>
+          </div>
+        <% end %>
+      <% end %>
     <% end %>
   </div>
 </div>
