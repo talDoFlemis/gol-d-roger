@@ -77,3 +77,5 @@ gem "tailwind_merge", "~> 0.12.0"
 gem "erb-formatter", "~> 0.7.3"
 
 gem "aws-sdk-s3", "~> 1.156"
+
+gem "inline_svg", "~> 1.9"
